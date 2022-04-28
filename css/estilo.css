@@ -3,17 +3,29 @@
     box-sizing: border-box;
 }
 
+html{
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
 #container{
     width: 80%;
+    background-color: #ffffff;
+    margin: 0 auto;
+    box-shadow: rgba(50, 50, 93, 0.25)
+    0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3)
+    0px 18px 36px -18px inset;
+    
 }
 
 body{
     margin: 0;
+    padding: 0 auto;
+    
 }
 
 nav{
     background-color: #d6bc73;
-    width: 100%;
+    width: 80%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     float: left;
     /* menu fixo na parte superior */
@@ -34,6 +46,7 @@ nav ul li{
 nav ul li a{
     text-decoration:none ;
     padding: 15px;
+    margin-top: 9px ;
     display: block;
     font-weight: bold;
     color: black;
@@ -44,12 +57,18 @@ nav ul li a:hover{
     color:#2e2d40;
 }
 
-h1,h2{
+h1,h2 {
     text-align: center;
     letter-spacing: 4px;
     padding: 15px;
+    margin:0 auto;
     color: #272323; 
     background-color: #D6BC73;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+p{
+    padding: 15px;
 }
 
 #logo{
@@ -57,17 +76,91 @@ h1,h2{
     margin: 3px;
 }
 
-.img-tamanho{
+.logo{
     text-align: center;
     width: 100%;
-    float: left;
 }
 
-.centraliza-imagem{
+.centraliza-logo{
     display: block;
     margin: 0 auto;
 }
 
-.paragrafo1{
-    padding: 35px;
+.imagem-tamanho{
+    width: 80%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
 }
+
+figure{
+    width: 100%;
+}
+
+figcaption{
+    text-align: center;
+    padding: 10px;
+
+}
+
+
+
+.ul-tamanho{
+    display: inline-block;
+    list-style: none;
+    border: 2px solid black;
+    border-radius: 3px;
+    /* padding: 10px; */
+    margin: 10px;
+    cursor: pointer;
+    float: right;
+
+}
+
+.titulo{
+    font-size:40px;
+    text-decoration: none;
+}
+
+/* From uiverse.io by @alexroumi */
+button {
+    padding: auto ;
+    margin: 20px;
+    border: 10px;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #d6bc73;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    /* -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27); */
+
+    transition: all 250ms;
+    overflow: hidden;
+    float: right;
+   }
+   
+   button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+   button:hover {
+    color: #e8e8e8;
+   }
+   
+   button:hover::before {
+    width: 100%;
+   }
